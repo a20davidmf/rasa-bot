@@ -11,7 +11,7 @@ RUN apt-get update \
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir pip==20.2
+RUN pip install --no-cache-dir
 
 RUN pip install rasa==2.8.1
 
