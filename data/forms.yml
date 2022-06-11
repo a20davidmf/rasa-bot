@@ -18,6 +18,71 @@ rules:
     - active_loop: null
     - action: action_search_wikipedia
 
+# Weather form
+
+- rule: Init weather form
+  steps:
+    - intent: ask_weather
+    - action: weather_form
+    - active_loop: weather_form
+
+- rule: Submit weather form
+  condition:
+    - active_loop: weather_form
+  steps:
+    - action: weather_form
+    - active_loop: null
+    - action: action_ask_weather
+
+# Telephone form
+
+- rule: Init telephone form
+  steps:
+    - intent: call_phone
+    - action: phone_number_form
+    - active_loop: phone_number_form
+
+- rule: Submit telephone form
+  condition:
+    - active_loop: phone_number_form
+  steps:
+    - action: phone_number_form
+    - active_loop: null
+    - action: action_call_phone
+
+# Email form
+
+- rule: Init email form
+  steps:
+    - intent: email
+    - action: email_form
+    - active_loop: email_form
+
+- rule: Submit email form
+  condition:
+    - active_loop: email_form
+  steps:
+    - action: email_form
+    - active_loop: null
+    - action: action_email
+
+# Alarm form
+
+- rule: Init alarm form
+  steps:
+    - intent: alarm
+    - action: alarm_form
+    - active_loop: alarm_form
+
+- rule: Submit alarm form
+  condition:
+    - active_loop: alarm_form
+  steps:
+    - action: alarm_form
+    - active_loop: null
+    - action: action_alarm
+
+
 
 
 

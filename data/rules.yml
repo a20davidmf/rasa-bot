@@ -11,3 +11,18 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Thank u
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- rule: Respond chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+#
+#- rule: Respond FAQs
+#  steps:
+#  - intent: faq
+#  - action: utter_faq

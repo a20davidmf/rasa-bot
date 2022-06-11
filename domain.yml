@@ -10,21 +10,56 @@ intents:
   - bot_challenge
   - search_wikipedia
   - stop
+  - ask_weather
+  - call_phone
+  - thank
+  - chitchat
+  - faq
+  - email
+  - alarm
 
 entities:
   - search
+  - GPE
+  - number
+  - email
+  - time
 
 slots:
   wikipedia_search:
     type: text
+  weather_location:
+    type: any
+  phone_number:
+    type: any
+  email_address:
+    type: text
+  email_subject:
+    type: text
+  email_body:
+    type: text
+  email_continue_body:
+    type: bool
+  alarm_time:
+    type: any
 
 actions:
   - validate_wikipedia_form
   - action_search_wikipedia
+  - action_ask_weather
+  - validate_weather_form
+  - validate_phone_number_form
+  - action_call_phone
+  - validate_email_form
+  - action_email
+  - validate_alarm_form
+  - action_alarm
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  - text: "Hello! What's up?"
+  - text: "Ciao! Do you need help with something?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -35,15 +70,70 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "That's fantastic!"
+  - text: "I'm so happy for you!"
 
   utter_goodbye:
   - text: "Bye"
+  - text: "Ciao"
+  - text: "Adios"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
   utter_ask_wikipedia_search:
-  - text: "Sure, what do you want to search? I recommend to put your query into \" \" so I can understand you better!"
+  - text: "Sure, what do you want to search? I recommend to put your query into \"\" so I can understand you better!"
+
+  utter_ask_weather_location:
+  - text: "Where is the place you are interested in looking the weather?"
+
+  utter_ask_phone_number:
+  - text: "What's the number of the person you want to call?"
+
+  utter_thank:
+  - text: "You're welcome. I'm here to help!"
+
+  utter_chitchat/identity:
+  - text: "I'm Robert, a chatbot created by David Mareque. Here's a picture of him:"
+    image: "https://dl.dropboxusercontent.com/s/p9vhaqub7k0k7ga/profile_picture.jpg"
+
+  utter_chitchat/joke:
+  - text: "What’s the smartest insect? A spelling bee!"
+  - text: "How does the ocean say hi? It waves!"
+  - text: "Why did the teddy bear say no to dessert? Because she was stuffed."
+  - text: "Why do birds fly south in the winter? It’s faster than walking!"
+
+  utter_chitchat/love:
+  - text: "I'm a bot. I can't feel any sign of love, maybe it's for the best"
+
+  utter_chitchat/siri:
+  - text: "That's my friend! So long since I've met her for the last time, glad she's working for Apple now"
+
+  utter_chitchat/song:
+  - text: "I do know how to sing, but right know I don't have a voice. Sorry!"
+
+  utter_chitchat/color:
+  - text: "The color that I like is the white. So simple and flat!"
+
+  utter_ask_email_address:
+  - text: "What's the address you want to send the email to?"
+
+  utter_ask_email_subject:
+  - text: "What's the subject of the email?"
+
+  utter_ask_email_continue_body:
+  - text: "Do you want to send a body with the email?"
+    buttons:
+      - title: "Yes"
+        payload: "/affirm"
+      - title: "No"
+        payload: "/deny"
+
+  utter_ask_email_body:
+  - text: "What do you want to say in the body?"
+
+  utter_ask_alarm_time:
+  - text: "At what time do you want to set the alarm?"
 
 forms:
   wikipedia_form:
@@ -51,6 +141,28 @@ forms:
       wikipedia_search:
         - type: from_entity
           entity: search
+  weather_form:
+    required_slots:
+      weather_location:
+        - type: from_entity
+          entity: GPE
+  phone_number_form:
+    required_slots:
+      phone_number:
+        - type: from_entity
+          entity: number
+  email_form:
+    required_slots:
+      email_address:
+        - type: from_entity
+          entity: email
+      email_subject:
+        - type: from_text
+  alarm_form:
+    required_slots:
+      alarm_time:
+        - type: from_entity
+          entity: time
 
 session_config:
   session_expiration_time: 60

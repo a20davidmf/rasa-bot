@@ -122,3 +122,106 @@ nlu:
     - search [Python](search)
     - find [java](search)
     - find something in Wikipedia
+
+# Weather intent
+- intent: ask_weather
+  examples: |
+    - how's the weather
+    - i want to know the weather
+    - the temperature
+    - how is the weather in [Ourense](GPE)
+    - i want to know the weather in [Lugo](GPE)
+    - tell me the weather in [Hawaii](GPE)
+    - the weather in [New Zealand](GPE)?
+    - weather [Madrid](GPE)
+    - please, i would like to know the temperature in [Sanxenxo](GPE)
+    - if that's possible, i want to know the weather in [Tokyo](GPE)
+    - how is the weather in [Santiago de Compostela](GPE)
+    - i want to know the weather in [Santiago de Chile](GPE)
+    - tell me the weather in [Vigo](GPE)
+    - the weather in [Egypt](GPE)?
+    - weather [Sidney](GPE)
+    - please, i would like to know the temperature in [Houston](GPE)
+    - if that's possible, i want to know the weather in [Singapur](GPE)
+
+# Call phone
+- intent: call_phone
+  examples: |
+    - can you call someone
+    - call 646816276
+    - please call 567889073
+    - can you dial 911
+
+# Email intent
+- intent: email
+  examples: |
+    - can you email someone
+    - email a20davidmf@iessanclemente.net with the subject "hello" and the body "Hi, this is a test"
+    - can you email a20davidmf@iessanclemente.net
+    - would you email to a20davidmf@iessanclemente.net with body "this is a test" and subject that says "hello"
+    - email a20davidmf@iessanclemente.net
+    - to a20davidmf@iessanclemente.net with subject "hello"
+
+# Alarm intent
+- intent: alarm
+  examples: |
+    - can you set an alarm for today at 5pm
+    - set an alarm at 21:05
+    - put an alarm for tomorrow at 8pm
+    - can you set an alarm?
+
+# Thank intent
+- intent: thank
+  examples: |
+    - thank you
+    - thank u so much
+    - thanks!
+
+# Chitchat intents
+
+- intent: chitchat/joke
+  examples: |
+    - tell me a joke
+    - do you know any joke
+    - i want to laugh
+    - are you funny?
+    - im bored
+
+- intent: chitchat/love
+  examples: |
+    - are you in love?
+    - marry me!
+    - i'm in love with you
+    - be my boyfriend
+    - do you have a girlfriend?
+
+- intent: chitchat/siri
+  examples: |
+    - do you know who is Siri?
+    - what can you tell me about Siri?
+    - what is your opinion about Siri?
+    - do you know Siri?
+
+- intent: chitchat/song
+  examples: |
+    - sing me a song
+    - can you sing me something
+    - sing me something!
+    - do you know how to sing?
+    - can you sing?
+
+- intent: chitchat/color
+  examples: |
+    - what's your favourite color?
+    - do you have a color that you like?
+    - any color you like?
+    - do you like a color?
+
+# Faqs Intents
+
+- intent: chitchat/identity
+  examples: |
+    - who are you?
+    - present yourself
+    - introduce yourself
+    - who am i talking to?
