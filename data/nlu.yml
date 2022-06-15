@@ -66,6 +66,7 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - good
 
 - intent: mood_unhappy
   examples: |
@@ -99,6 +100,8 @@ nlu:
     - forget it
     - stop
     - please don't continue
+    - nevermind
+    - forgetit
 
 # Wikipedia Intent
 - intent: search_wikipedia
@@ -122,6 +125,10 @@ nlu:
     - search [Python](search)
     - find [java](search)
     - find something in Wikipedia
+    - can you tell me information about [Beyonce](search)?
+    - send me information about [Ariana Grande](search)
+    - can you find me something?
+    - find me information about [Lady Gaga](search)
 
 # Weather intent
 - intent: ask_weather
@@ -156,6 +163,7 @@ nlu:
 - intent: email
   examples: |
     - can you email someone
+    - can you send an email
     - email a20davidmf@iessanclemente.net with the subject "hello" and the body "Hi, this is a test"
     - can you email a20davidmf@iessanclemente.net
     - would you email to a20davidmf@iessanclemente.net with body "this is a test" and subject that says "hello"
@@ -194,6 +202,7 @@ nlu:
     - i'm in love with you
     - be my boyfriend
     - do you have a girlfriend?
+    - do you fancy someone?
 
 - intent: chitchat/siri
   examples: |
@@ -201,6 +210,8 @@ nlu:
     - what can you tell me about Siri?
     - what is your opinion about Siri?
     - do you know Siri?
+    - who is Siri?
+    - do you know siri?
 
 - intent: chitchat/song
   examples: |
@@ -209,6 +220,7 @@ nlu:
     - sing me something!
     - do you know how to sing?
     - can you sing?
+    - what's your favourite song?
 
 - intent: chitchat/color
   examples: |
@@ -217,11 +229,50 @@ nlu:
     - any color you like?
     - do you like a color?
 
+- intent: chitchat/chatbots
+  examples: |
+    - what's your opinion on chatbot?
+    - what do you think about your friends?
+    - what do you think about chatbot
+    - do you think something about chatbot
+    - what is your opinion on your friends?
+
+- intent: chitchat/funfact
+  examples: |
+    - tell me a fun fact
+    - can you give me a fun fact
+    - fun fact pls
+    - fun fact please
+    - funfact pleaseeee
+    - tell me a funfact!
+    - cna you tell me a funfact!
+
 # Faqs Intents
 
-- intent: chitchat/identity
+- intent: faq/identity
   examples: |
     - who are you?
     - present yourself
     - introduce yourself
     - who am i talking to?
+    - what is your name?
+    - how do the call you?
+
+- intent: faq/lost
+  examples: |
+    - im lost
+    - i don't know what to do
+    - can you help me?
+    - i need help!
+    - pls help me
+    - i'm a little lost
+
+- intent: faq/contact
+  examples: |
+    - how can I contact your owner?
+    - can you give me the email of the creator?
+    - can you give me the email of your creator?
+    - the email of the owner?
+    - how can I contact David Mareque?
+    - how can I contact David?
+    - contact David

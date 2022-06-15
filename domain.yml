@@ -57,13 +57,23 @@ actions:
 
 responses:
   utter_greet:
+  - text: "Hey! Do you need help with something?"
+  - text: "Hello! Do you need help with something?"
+  - text: "Hola! Do you need help with something?"
   - text: "Hey! How are you?"
-  - text: "Hello! What's up?"
-  - text: "Ciao! Do you need help with something?"
+  - text: "Hello! How are you?"
+  - text: "Hola! How are you?"
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/n4sQzhh.jpeg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/fQwOzwp.jpeg"
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/G1u7Qel.jpeg"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -75,8 +85,8 @@ responses:
 
   utter_goodbye:
   - text: "Bye"
-  - text: "Ciao"
   - text: "Adios"
+  - text: "See you"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -93,9 +103,21 @@ responses:
   utter_thank:
   - text: "You're welcome. I'm here to help!"
 
-  utter_chitchat/identity:
+  utter_sorry:
+  - text: "Sorry to hear that!"
+
+  utter_no_help:
+  - text: "Ok. If you get lost just type \"I'm lost!\" and I'll help you"
+
+  utter_faq/identity:
   - text: "I'm Robert, a chatbot created by David Mareque. Here's a picture of him:"
-    image: "https://dl.dropboxusercontent.com/s/p9vhaqub7k0k7ga/profile_picture.jpg"
+    image: "https://dl.dropbox.com/s/glb45c0kzynx1sp/profile_picture.jpg"
+
+  utter_faq/lost:
+  - text: "I'm Robert and I'm here to help you. You can chat with me and do basic things. Here's the things that I am programmed for: call someone, send emails, set alarms, consult Wikipedia and check the weather. You can start by asking me some of those things!"
+
+  utter_faq/contact:
+  - text: "You can contact him by sending an email to marequefontaodavid@gmail.com. I'm sure he'll be happy to talk to you!"
 
   utter_chitchat/joke:
   - text: "What’s the smartest insect? A spelling bee!"
@@ -110,10 +132,28 @@ responses:
   - text: "That's my friend! So long since I've met her for the last time, glad she's working for Apple now"
 
   utter_chitchat/song:
-  - text: "I do know how to sing, but right know I don't have a voice. Sorry!"
+  - text: "I know how to sing, but right know I don't have a voice. Sorry!"
 
   utter_chitchat/color:
   - text: "The color that I like is the white. So simple and flat!"
+
+  utter_chitchat/chatbots:
+  - text: "I think chatbots are pretty cool! We can do things faster and we offer a little conversation"
+
+  utter_chitchat/funfact:
+  - text: "Avocados are a fruit, not a vegetable. They're technically considered a single-seeded berry, believe it or not."
+    image: "https://i.imgur.com/r0JmypX.jpeg"
+  - text: "The Eiffel Tower can be 15 cm taller during the summer, due to thermal expansion meaning the iron heats up, the particles gain kinetic energy and take up more space."
+    image: "https://i.imgur.com/Q6o3sF8.jpeg"
+  - text: "Trypophobia is the fear of closely-packed holes. Or more specifically, \"an aversion to the sight of irregular patterns or clusters of small holes or bumps.\" No crumpets for them, then."
+    image: "https://i.imgur.com/PFmvHaD.jpeg"
+  - text: "Australia is wider than the moon. The moon sits at 3400km in diameter, while Australia’s diameter from east to west is almost 4000km."
+    image: "https://i.imgur.com/KtV9Fbc.jpeg"
+  - text: "The Spice Girls were originally a band called Touch. \"When we first started [with the name Touch], we were pretty bland,\" Mel C told The Guardian in 2018. \"We felt like we had to fit into a mould.\""
+  - text: "It's illegal to own just one guinea pig in Switzerland. It's considered animal abuse because they're social beings and get lonely."
+    image: "https://i.imgur.com/TrqlB8I.png"
+  - text: "The Ancient Romans used to drop a piece of toast into their wine for good health - hence why we 'raise a toast'."
+  - text: "The heart of a shrimp is located in its head. They also have an open circulatory system, which means they have no arteries and their organs float directly in blood."
 
   utter_ask_email_address:
   - text: "What's the address you want to send the email to?"

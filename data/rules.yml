@@ -21,8 +21,8 @@ rules:
   steps:
   - intent: chitchat
   - action: utter_chitchat
-#
-#- rule: Respond FAQs
-#  steps:
-#  - intent: faq
-#  - action: utter_faq
+
+- rule: Respond FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
